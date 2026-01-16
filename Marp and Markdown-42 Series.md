@@ -80,22 +80,31 @@ backgroundColor: white
 
 ## How does it work?
 
-### Header + Text + markup + css = FAIR content
+### YAML + Text + markup + css + links to illustration= FAIR content
 - Your documents will start with a standard header that triggers the marp framework, the document options and the style that applies
 - You text will then be written with small markers to define how it behaves and which style it is in, how pages or slides will be separated,
-
-### Fonts, colors, Images and Backgrounds = great look
+- VS Code will connect your text to generate the finished document:
+  - the Marp slide and page generator, 
+  - the CSS
+  - the images 
+  - the backgrounds
 
 ### Generate pdf, deck or brochures
+Your Markdown document will be exportable to business standard format:
+- pdf
+- powerpoint
+- html
 
-### Follow your streamlined processes!
+You'll be able to set the format as regular slides (4:3, 16:9) or any page format for memos.
 
+### Follow our streamlined processes!
+Across the book we will share with you the base practices along with processes we defined to work with Marp Markdown. We have also developed extensions to VS Code to help you work even faster. While they are not mandatory to benefit from the power of this approach, they bring even more speed and simplicity to content production.
 
 ---
 
 ## The keys to Text Markup
 
-Once the Markdown foundations are understood, you can work with your favorite LLM and ask it to provide you with the right notation to employ. Also, as you converse with it, it will naturally deliver its content in Markdown and you'll be able to paste it direcly in your deck or write-up.
+Once the Markdown foundations are understood, you can work with your favorite LLM and ask it to provide you with the right notation to employ. Also, as you converse with it, it will naturally deliver its content in Markdown and you'll be able to paste it directly in your deck or write-up.
 
 
 ### Text styling options
@@ -110,11 +119,12 @@ Once the Markdown foundations are understood, you can work with your favorite LL
   - margin
   - padding
   - Line height
-- Ask your favorite LLM to learn new ones and expand the finesse of your CSS setup
+- Ask your favorite LLM to learn new ones and expand the finesse of your CSS setup.
+
+---
 
 They are defined with this syntax structure:
 
-    ```css
             h5{
             font-size: 12pt;    
             background: #FFFFFF;
@@ -125,15 +135,21 @@ They are defined with this syntax structure:
             font-weight: 200;
             line-height: 1.6;
             }
-    ```
-
+ 
 ### the base style
 
 p is the base style applied when no markup is added.
 It can be set to italic by adding * before and after, to bold by adding ** and bold-italic by adding ***
+when in the format of an email or a url, it will become "a" style that can be formatted separately.
+
+p, like any other style below, can be styled for its normal style, but also for its bold style (p strong) and italic (p italic)
 
 
 ### the headers styles
+
+The headers can be set by adding # before the text. You can use 1 to 6 # to call 6 levels of titles.
+
+You can use them for title level 1 to 6. However, as most document not always have 6 levels, level 5 or 6 (or even 4) can be repurposed for 
 
 ### the ordered and unordered list styles
 
