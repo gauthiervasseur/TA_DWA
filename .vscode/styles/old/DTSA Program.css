@@ -1,0 +1,138 @@
+/**
+ * Deep Tech Security Accelerator Program Schedule Styles
+ * 
+ * This CSS file builds on the base styling defined in doc-dtsa.css
+ * and is inspired by the style of the Detailed DTSA Program (PDF).
+ */
+
+/* Import the default/base styles from your doc-dtsa.css file */
+@import 'default';
+
+/* -------------------------------------------------------------------------- */
+/* Container & General Layout */
+/* -------------------------------------------------------------------------- */
+
+/* The primary container for the program schedule */
+.program {
+  width: 8.5in;
+  margin: 0 auto;
+  padding: 1in;
+  background-color: #fff;
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Use the section rule from doc-dtsa.css for print pages, etc. */
+section {
+  width: 8.5in;
+  height: 11in;
+  padding: 0.5in 1in;
+  color: black;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Headers and Day Titles */
+/* -------------------------------------------------------------------------- */
+
+/* Main schedule title (if used) */
+h1.schedule-title {
+  color: #5FBF75;
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Day header styling, inspired by the PDF look */
+.day-header {
+  font-size: 18pt;
+  color: #5FBF75;
+  border-bottom: 2px solid #7b7b7b;
+  margin: 20px 10px 10px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Session (Event) Block Styles */
+/* -------------------------------------------------------------------------- */
+
+/* Each session is displayed using a flex layout with a fixed time column */
+.session {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 10px 20px;
+  padding: 8px 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+/* Session time styling */
+.session-time {
+  flex: 0 0 150px;
+  font-weight: bold;
+  color: #4F758B;
+  font-size: 10pt;
+  line-height: 1.2;
+}
+
+/* Details (event title and speaker details) are in a flexible column */
+.session-details {
+  flex: 1;
+}
+
+/* Event title style within the session details */
+.event-title {
+  font-size: 12pt;
+  color: #424242;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+/* Speaker or additional session info styling */
+.session-speaker {
+  font-size: 10pt;
+  color: #7b7b7b;
+  margin-left: 10px;
+  line-height: 1.2;
+}
+
+/* Special style for sessions labelled as breaks (coffee breaks, etc.) */
+.session.break {
+  font-style: italic;
+  color: #999;
+  text-align: center;
+  /* Optionally override flex settings if break sessions need to span full width */
+  display: block;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Links & Interactive Elements */
+/* -------------------------------------------------------------------------- */
+
+/* Anchor links (LinkedIn, maps, etc.) follow the accent color from the base */
+a {
+  color: #5FBF75;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Responsive / Print Adjustments */
+/* -------------------------------------------------------------------------- */
+
+@media print {
+  .program {
+    width: 100%;
+    margin: 0;
+    padding: 0.5in;
+  }
+  /* Ensure page numbers (from doc-dtsa.css) display properly */
+  section::after {
+    font-size: 12px;
+    color: #aaa;
+  }
+}

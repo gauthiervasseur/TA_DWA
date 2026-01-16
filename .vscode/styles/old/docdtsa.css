@@ -1,0 +1,214 @@
+/**
+ * @theme docdtsa
+ * @auto-scaling fittingHeader,math
+ */
+
+ @import 'default';
+
+ section {
+  width: 8.5in;
+  height: 11in;
+  color: black;
+  padding-left: 0.5in;
+  padding-right: 0.5in;
+  padding-top: 0.5in;
+  padding-bottom: 0.5in;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Start from the top */
+  align-items: stretch; /* Let elements decide their own alignment */
+  text-align: left; /* Normal text is aligned left */
+}
+  /* Brochure Font */
+  p, ul, footer, header, th, td, ol, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    }
+    
+  /* PAGE NUMBER */
+section::after {
+  content: attr(data-marpit-pagination);
+  position: absolute;
+  bottom: 15px;
+  right: 40px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Make all bold text orange */
+strong, b, {
+  color: #5FBF75  ;
+}
+
+/* Make bold text inside h4 orange */
+h4 strong, h4 b {
+  color: #5FBF75; /* orange */
+  font-weight: bold;
+  text-align: center; /* Options: left, right, center, justify */
+}
+ 
+ /* Section Headers */
+ h1 {
+   color: #000000;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-size: 30pt;
+   font-weight: bold;
+   margin-top: 0px;
+   text-align: center; /* Options: left, right, center, justify */
+
+ }
+ 
+ h2 {
+   color: #7b7b7b;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-size: 16pt;
+   padding-top: 0px;
+   padding-bottom: 0px;
+  }
+ 
+ h3 {
+   color: #000000;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-size: 14pt;
+ }
+ 
+ h4 {
+   color: #424242;
+   font-size: 18pt;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   text-align: center; /* Options: left, right, center, justify */
+ }
+ 
+ h5 {
+   color: #ffffff;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   font-size: 20pt;
+ }
+ 
+ h6 {
+   color: #424242;
+   font-size: 14pt;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+ }
+ 
+ p {
+   color: #000000;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-size: 10pt;
+   margin-top: 0px;
+   margin-bottom: 5px;
+ }
+ 
+ ul  {
+   color: #000000;
+   margin-top: 0px;
+   margin-bottom: 5px;
+   margin-left: 10px;
+   margin-right: 20px;
+   font-size: 10pt;
+ }
+
+ li > ul {
+  color: #000000;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 10pt;
+}
+
+ol  {
+  color: #000000;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 10pt;
+}
+
+li > ol {
+ color: #000000;
+ margin-top: 0px;
+ margin-bottom: 10px;
+ margin-left: 20px;
+ margin-right: 20px;
+ font-size: 10pt;
+}
+
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: fit-content;
+  font-size: 16px;
+}
+
+table, th, td {
+  border: 0px solid #ddd;
+  padding: 8px;
+}
+
+td, th {
+  background-color: transparent !important;
+}
+
+
+table tr:nth-child(even) {
+  background-color: #5fbf7547;
+}
+
+th, td {
+  color: #000000;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 10pt;
+}
+
+section table thead tr th,
+section table tr:first-child th {
+background-color: #5FBF75 !important;
+}
+
+td:nth-child(even){background-color: #ebf0fa}
+ 
+ /* Blocks with Borders */
+ .block {
+   border: 0px solid black;
+   padding: 10px;
+   margin-bottom: 10px;
+ }
+ 
+ /* Force Page Break in Print */
+ .page-break {
+   page-break-before: always;
+ }
+
+ .watermark-slide {
+  position: absolute;
+  top: 100%;
+  left: 120%;
+  width: 900px;
+  height: 900px;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}

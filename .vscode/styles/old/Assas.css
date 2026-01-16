@@ -1,0 +1,196 @@
+/**
+ * @theme Assas
+ * @auto-scaling fittingHeader,math
+ */
+
+@import 'default';
+
+p, ul, footer, header, th, td, ol, ol li, ul li, li, h1, h2, h3, h4, h5, h6 {
+ font-family: 'Century Gothic', 'Crimson', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+   hyphens: none;
+ }
+
+h1 {
+ font-family: 'Century Gothic', 'Crimson', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+/* Define variables for easy customization */
+:root {
+ --h1col: ; /*Header 1 Color*/
+ --h2col: #EA3C57; /*Header 2 Color*/
+ --h3col: #000000; /*Header 3 Color*/
+ --h4col: #FFFFFF; /*Header 4 Color*/
+ --h5col: #EA3C57; /*Header 5 Color*/
+ --h6col: #58026B; /*Header 6 Color*/
+ --color-link: #EA3C57; /* Link color */
+ --color-bg: #FFFFFF; /* Background color */
+ --color-border: #CCCCCC; /* Border color */
+ --color-p: #000000; /* Paragraph color */
+ --color-bold: #4A4A4A; /* Bold text color */
+ --color-list-disc: #4A4A4A; /* Custom disc bullet color */
+ --color-list-square: #4A4A4A; /* Custom square bullet color */
+ --color-list-circle: #4A4A4A; /* Custom circle bullet color */
+}
+
+/* Apply font family and global text settings */
+p, footer, header, th, td, ol, ul, li, h1, h2, h3, h4, h5, h6 {
+ font-family: var(--font-family);
+ hyphens: none; /* Disable hyphenation */
+ word-wrap: break-word; /* Words wrap to next line */
+}
+
+
+/* Paragraphs */
+p {
+ color: var(--color-p);
+ font-size: 28px;
+ margin: 10px 15px;
+ padding-bottom: 10px;
+ background-color: transparent;
+ border: none;
+}
+
+/* Headings */
+h1, h2, h3 {
+ margin: 10px 15px;
+ padding-bottom: 10px;
+ line-height: 1;
+}
+
+/* Headings 2 */
+h4, h5, h6 {
+ margin: 10px 15px;
+ padding-bottom: 10px;
+ line-height: 1;
+ text-align: center; /* Options: left, right, center, justify */
+}
+
+h1 { font-size: 55px; color: var(--h1col); }
+h2 { font-size: 45px; color: var(--h2col); }
+h3 { font-size: 35px; color: var(--h3col); }
+h4 { font-size: 90px; color: var(--h4col); }
+h5 { font-size: 80px; color: var(--h5col); }
+h6 { font-size: 70px; color: var(--h6col); }
+
+/* Bold and strong text */
+strong, b {
+ color: var(--color-bold);
+}
+
+/* Ordered List */
+ol {
+ counter-reset: list-counter;
+ padding-left: 30px;
+ font-size: 25px;
+}
+
+ol li {
+ counter-increment: list-counter;
+ list-style: none;
+ padding-left: 10px;
+}
+
+ol li::before {
+ content: counter(list-counter) ".";
+ color: var(--h1col);
+ font-size: 30px;
+ margin-right: 10px;
+ display: inline-block;
+ width: 1.5em;
+}
+
+/* Unordered List with custom bullet styles */
+ul {
+ padding-left: 40px;
+ font-size: 26px;
+}
+
+ul li {
+ padding-left: 0px;
+}
+
+ul.disc li {
+ list-style-type: disc;
+ color: var(--color-list-disc); /* Custom disc bullet color */
+}
+
+ul.square li {
+ list-style-type: square;
+ color: var(--color-list-square); /* Custom square bullet color */
+}
+
+ul.circle li {
+ list-style-type: circle;
+ color: var(--color-list-circle); /* Custom circle bullet color */
+}
+
+/* Table */
+th {
+ color: var(--h1col);
+ background-color: var(--h4col);
+ border-bottom: 2px solid var(--color-border);
+ font-size: 15px;
+ padding: 2px 8px;
+}
+
+td {
+ color: var(--h1col);
+ background-color: var(--color-bg);
+ border-bottom: 2px solid var(--color-border);
+ font-size: 15px;
+ padding: 2px 8px;
+}
+
+/* Links */
+a {
+ color: var(--color-link);
+ text-decoration: none;
+}
+
+a:hover {
+ text-decoration: underline;
+}
+
+/* Images */
+img {
+ max-width: 100%;
+ height: auto;
+ display: block;
+ margin: 0 auto;
+ border-radius: 0px;
+}
+
+/* Code blocks */
+pre code {
+ font-size: 20px;
+ white-space: pre-wrap; /* Handling of white space: normal, nowrap, pre, pre-wrap, pre-line */
+ }
+
+/* Global emoji behavior */
+.emoji {
+ display: inline !important;
+ vertical-align: baseline !important;
+ line-height: inherit !important;
+}
+
+.secret-button {
+ color: transparent;
+ text-decoration: none;
+ cursor: pointer;
+}
+
+.columns2 {
+   display: grid;
+   grid-template-columns: 2fr 1fr; /* Left column takes 1/3, right column takes 2/3 */
+   gap: 1rem; /* Adjust the gap between columns */
+   font-size: 30px;
+
+ }
+
+.columns3 {
+ display: grid;
+ grid-template-columns: repeat(3, minmax(0, 1fr));
+ gap: 1rem;
+}
+

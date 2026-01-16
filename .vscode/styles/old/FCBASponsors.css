@@ -1,0 +1,126 @@
+/**
+ * @theme fcbasponsors
+ * @auto-scaling fittingHeader,math
+ */
+
+ @import 'default';
+
+ /************* Color reference chart ****************
+  BERKELEY BLUE:      #041E42;
+  FOUNDER’S ROCK:     #4F758B;
+  CALIFORNIA GOLD:    #FFC72C;
+  MEDALIST:           #D19000;
+  BAY FOG:            #B7B09C;
+  SOYBEAN:            #ABAD23;
+  SOUTH HALL:         #7B4931;
+  GOLDEN GATE:        #E04F39;
+  ROSE GARDEN:        #E0004D
+ *****************************************************/
+ 
+ :root {
+   --berkeley-blue: #041E42;
+   --founders-rock: #4F758B;
+   --california-gold: #FFC72C;
+   --medalist: #D19000;
+   --bay-fog: #B7B09C;
+   --soybean: #ABAD23;
+   --south-hall: #7B4931;
+   --golden-gate: #E04F39;
+   --rose-garden: #E0004D;
+ 
+   --h1col: var(--berkeley-blue);
+   --h2col: var(--california-gold);
+   --h3col: var(--berkeley-blue);
+   --h4col: #FFFFFF;
+   --h5col: var(--berkeley-blue);
+   --h6col: #FFFFFF;
+   --lists: var(--berkeley-blue);
+   --tabhd: var(--berkeley-blue);
+ }
+ 
+ body, p, ul, ol, th, td, header, footer,
+ h1, h2, h3, h4, h5, h6 {
+   font-family: 'Freight Sans', sans-serif;
+   color: var(--berkeley-blue);
+   margin: 0;
+   padding: 0;
+ }
+ 
+ p {
+   font-size: 25px;
+   line-height: 1.2;
+   margin: 10px 15px 10px 15px;
+   padding-bottom: 10px;
+   background-color: transparent;
+   white-space: normal;
+ }
+ 
+ p strong, p b {
+   color:  #000000;
+ }
+ 
+ h1 {
+   color: var(--h1col);
+   font-size: 55px;
+   font-weight: bold;
+   margin: 10px 15px;
+ }
+ 
+ h1 strong, h1 b {
+   color: #000000;
+ }
+ 
+ h2 {
+   color: var(--h2col);
+   font-size: 50px;
+   font-weight: bold;
+   margin: 20px 15px 10px 15px;
+   padding-bottom: 10px;
+ }
+ 
+ h2 strong, h2 b {
+   color: var(--california-gold);
+ }
+ 
+ h3 {
+   color: var(--h3col);
+   font-size: 30px;
+   font-weight: bold;
+   margin: 15px 15px 10px 15px;
+ }
+ 
+ h4 {
+   color: var(--h4col);
+   font-size: 30px;
+   font-weight: bold;
+   margin: 10px 15px;
+ }
+ 
+ h5 {
+   color: var(--h5col);
+   font-size: 25px;
+   font-weight: bold;
+   margin: 10px 15px;
+ }
+ 
+ h6 {
+   color: var(--h6col);
+   font-size: 20px;
+   font-weight: bold;
+   margin: 10px 15px;
+ }
+ 
+ ul, ol {
+   color: var(--lists);
+   font-size: 22px;
+   margin: 10px 30px;
+ }
+ 
+ pre code {
+   font-size: 15px;
+   line-height: 2;
+   white-space: pre-wrap !important;
+   word-wrap: break-word;
+   overflow: visible;
+ }
+ 

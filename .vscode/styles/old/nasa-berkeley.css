@@ -1,0 +1,572 @@
+/**
+ * @theme nasa-berkeley
+ * @auto-scaling fittingHeader,math
+ */
+
+
+ @import 'default';
+
+p, ul, footer, header, th, td, ol, ul, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Univers', sans-serif;
+  }
+  
+  /************* Color reference chart****************
+  BERKELEY BLUE:       #041E42;
+  FOUNDER’S ROCK:      #4F758B;
+  CALIFORNIA GOLD:    #FFC72C;
+  MEDALIST:           #D19000;
+  BAY FOG:            #B7B09C;
+  SOYBEAN:             #ABAD23;
+  SOUTH HALL:         #7B4931;
+  GOLDEN GATE:         #E04F39
+  ROSE GARDEN:        #E0004D
+  */
+  
+  
+  :root {
+    --h1col: #041E42;
+    --h2col: #FFC72C;
+    --h3col: #041E42;
+    --h4col: #B7B09C	;
+    --h5col: #041E42;
+    --h6col: #041E42;
+    --lists: #041E42;
+    --Tabhd: #041E42;
+  }
+  
+  strong, b {
+      color: #FFC72C; /* Change the color of bold */
+    }
+  
+  h1 strong, h1 b {
+      color: #000000; /* Color for bold text in h2 headings */
+  }
+  
+  h2 strong, h2 b {
+      color: #FFC72C; /* Color for bold text in h2 headings */
+  }
+  
+  marp-pre code {
+    color: var(--text);
+    font-size: 25px;
+    font-weight: normal;
+    font-family: 'Monaco', monospace;
+    padding-left: 2px;
+  }
+  
+  
+  code {
+    color: var(--text);
+    background-color: #FFC72C;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+  
+  p {
+      display: block;
+      color: var(--allcol);
+      /* Font styling */
+      /*font-family: 'Arial', sans-serif; /* Change the font family */ 
+      font-size: 35px; /* Adjust the font size */
+      font-weight: normal; /* Options: normal, bold, bolder, lighter, or numbers 100-900 */
+      font-style: normal; /* Options: normal, italic, oblique */
+      line-height: 1; /* Adjust the line spacing */
+      text-align: left; /* Options: left, right, center, justify */
+      /*color: #333333; /* Text color */
+      text-transform: none; /* Options: none, capitalize, uppercase, lowercase */
+      text-decoration: none; /* Options: none, underline, overline, line-through */
+      letter-spacing: normal; /* Adjust spacing between characters */
+      word-spacing: normal; /* Adjust spacing between words */
+  
+      /* Margin and Padding */
+      margin: 10px 0; /* Adjust the margin around paragraphs */
+      margin-top: 0px;    /* Space above the paragraph */
+      margin-right: 15px;  /* Space to the right of the paragraph */
+      margin-bottom: 10px; /* Space below the paragraph */
+      margin-left: 15px;   /* Space to the left of the paragraph */
+    
+    /* Padding */
+      padding-top: 0px;    /* Space above the content inside the paragraph */
+      padding-right: 0px;  /* Space to the right of the content inside the paragraph */
+      padding-bottom: 10px; /* Space below the content inside the paragraph */
+      padding-left: 0px;   /* Space to the left of the content inside the paragraph */
+  
+      /* Background and Borders */
+      background-color: transparent; /* Background color of paragraph */
+      border: none; /* Border around paragraph: style, width, and color */
+      border-radius: 0; /* Rounded corners for paragraph background */
+  
+      /*border: 2px solid #000000; /* 2px thick solid black border */
+      /*padding: 10px; /* Optional: Adds space between the text and the border */
+      /*margin: 10px 0; /* Optional: Adds space outside the border */
+  
+      /* Shadow and Effects */
+      text-shadow: none; /* Text shadow: h-shadow, v-shadow, blur-radius, and color text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Horizontal and vertical offset, blur radius, and color */
+      box-shadow: none; /* Box shadow: h-offset, v-offset, blur-radius, spread-radius, color */
+  
+      /* Other properties */
+      white-space: normal; /* Handling of white space: normal, nowrap, pre, pre-wrap, pre-line */
+      overflow: visible; /* Handling content overflow: visible, hidden, scroll, auto */
+      word-break: normal; /* Word breaking: normal, break-all, keep-all, break-word */
+      hyphens: auto; /* Automatic hyphenation: none, manual, auto */
+  }
+  
+  
+  h1 {
+      color: var(--h1col);
+      /* Font styling */
+      /* font-family: 'Century Gothic', sans-serif; */
+      font-size: 55px; /* Adjust the font size */
+      font-weight: bold; /* Options: normal, bold, bolder, lighter, or numbers 100-900 */
+      font-style: normal; /* Options: normal, italic, oblique */
+      font-variant: normal; /* Options: normal, small-caps */
+      line-height: 1.2; /* Adjust the line spacing */
+      text-align: left; /* Options: left, right, center, justify */
+      text-transform: none; /* Options: none, capitalize, uppercase, lowercase */
+      text-decoration: none; /* Options: none, underline, overline, line-through */
+      letter-spacing: normal; /* Adjust spacing between characters */
+      word-spacing: normal; /* Adjust spacing between words */
+      overflow: visible; /* Make sure it's not set to 'hidden' */
+  
+      /* Margin and Padding */
+      margin-top: 0px;   /* Space above the paragraph */
+      margin-right: 15px;  /* Space to the right of the paragraph */
+      margin-bottom: 10px; /* Space below the paragraph */
+      margin-left: 15px;   /* Space to the left of the paragraph */
+    
+      /* Padding */
+      padding-top: 0px;    /* Space above the content inside the paragraph */
+      padding-right: 0px;  /* Space to the right of the content inside the paragraph */
+      padding-bottom:0px; /* Space below the content inside the paragraph */
+      padding-left: 0px;   /* Space to the left of the content inside the paragraph */
+  
+      /* Background and Borders */
+      background-color: transparent; /* Background color of paragraph */
+      border: none; /* Border around paragraph: style, width, and color */
+      border-radius: 0; /* Rounded corners for paragraph background */
+  
+      /* Shadow and Effects */
+      text-shadow: none; /* Text shadow: h-shadow, v-shadow, blur-radius, and color */
+      box-shadow: none; /* Box shadow: h-offset, v-offset, blur-radius, spread-radius, color */
+  
+      /* Other properties */
+      white-space: normal; /* Handling of white space: normal, nowrap, pre, pre-wrap, pre-line */
+      overflow: visible; /* Handling content overflow: visible, hidden, scroll, auto */
+      word-break: normal; /* Word breaking: normal, break-all, keep-all, break-word */
+      hyphens: auto; /* Automatic hyphenation: none, manual, auto */
+  }
+  
+  h2 {
+  display: block;
+      color: var(--h2col);
+      font-size: 18px;
+      /* Font styling */
+      /*font-family: 'Rastanty Cortez', sans-serif; /* Change the font family */
+      font-size: 50px; /* Adjust the font size */
+      font-weight: bold; /* Options: normal, bold, bolder, lighter, or numbers 100-900 */
+      font-style: italic; /* Options: normal, italic, oblique */
+      font-variant: normal; /* Options: normal, small-caps */
+      line-height: 1; /* Adjust the line spacing */
+      text-align: left; /* Options: left, right, center, justify */
+      text-transform: none; /* Options: none, capitalize, uppercase, lowercase */
+      text-decoration: none; /* Options: none, underline, overline, line-through */
+      letter-spacing: normal; /* Adjust spacing between characters */
+      word-spacing: normal; /* Adjust spacing between words */
+  
+      /* Margin and Padding */
+      margin-top: 20px;    /* Space above the paragraph */
+      margin-right: 15px;  /* Space to the right of the paragraph */
+      margin-bottom: 10px; /* Space below the paragraph */
+      margin-left: 15px;   /* Space to the left of the paragraph */
+    
+      /* Padding */
+      padding-top: 0px;    /* Space above the content inside the paragraph */
+      padding-right: 0px;  /* Space to the right of the content inside the paragraph */
+      padding-bottom: 10px; /* Space below the content inside the paragraph */
+      padding-left: 0px;   /* Space to the left of the content inside the paragraph */
+  
+      /* Background and Borders */
+      background-color: transparent; /* Background color of paragraph */
+      border: none; /* Border around paragraph: style, width, and color */
+      border-radius: 0; /* Rounded corners for paragraph background */
+  
+      /* Shadow and Effects */
+      text-shadow: none; /* Text shadow: h-shadow, v-shadow, blur-radius, and color */
+      box-shadow: none; /* Box shadow: h-offset, v-offset, blur-radius, spread-radius, color */
+  
+      /* Other properties */
+      white-space: normal; /* Handling of white space: normal, nowrap, pre, pre-wrap, pre-line */
+      overflow: visible; /* Handling content overflow: visible, hidden, scroll, auto */
+      word-break: normal; /* Word breaking: normal, break-all, keep-all, break-word */
+      hyphens: auto; /* Automatic hyphenation: none, manual, auto */
+  
+  }
+  
+  h3 {
+  display: block;
+      color: var(--h3col);
+      /* Font styling */
+      /*font-family: 'Arial', sans-serif; /* Change the font family */
+      font-size: 70px; /* Adjust the font size */
+      font-weight: bold; /* Options: normal, bold, bolder, lighter, or numbers 100-900 */
+      font-style: normal; /* Options: normal, italic, oblique */
+      font-variant: normal; /* Options: normal, small-caps */
+      line-height: 1; /* Adjust the line spacing */
+      text-align: left; /* Options: left, right, center, justify */
+      text-transform: none; /* Options: none, capitalize, uppercase, lowercase */
+      text-decoration: none; /* Options: none, underline, overline, line-through */
+      letter-spacing: normal; /* Adjust spacing between characters */
+      word-spacing: normal; /* Adjust spacing between words */
+  
+      /* Margin and Padding */
+      margin: 10px 0; /* Adjust the margin around paragraphs */
+      margin-top: 10px;    /* Space above the paragraph */
+      margin-right: 15px;  /* Space to the right of the paragraph */
+      margin-bottom: 10px; /* Space below the paragraph */
+      margin-left: 15px;   /* Space to the left of the paragraph */
+    
+      /* Padding */
+      padding-top: 0px;    /* Space above the content inside the paragraph */
+      padding-right: 0px;  /* Space to the right of the content inside the paragraph */
+      padding-bottom: 0px; /* Space below the content inside the paragraph */
+      padding-left: 0px;   /* Space to the left of the content inside the paragraph */
+  
+      /* Background and Borders */
+      background-color: transparent; /* Background color of paragraph */
+      border: none; /* Border around paragraph: style, width, and color */
+      border-radius: 0; /* Rounded corners for paragraph background */
+  
+      /* Shadow and Effects */
+      text-shadow: none; /* Text shadow: h-shadow, v-shadow, blur-radius, and color */
+      box-shadow: none; /* Box shadow: h-offset, v-offset, blur-radius, spread-radius, color */
+  
+      /* Other properties */
+      white-space: normal; /* Handling of white space: normal, nowrap, pre, pre-wrap, pre-line */
+      overflow: visible; /* Handling content overflow: visible, hidden, scroll, auto */
+      word-break: normal; /* Word breaking: normal, break-all, keep-all, break-word */
+      hyphens: auto; /* Automatic hyphenation: none, manual, auto */
+  }
+  
+  h4 {
+  display: block;
+      color: var(--h4col);
+      /* Font styling */
+      /*font-family: 'Rastanty Cortez', sans-serif; /* Change the font family */
+      font-size: 40px; /* Adjust the font size */
+      font-weight: bold; /* Options: normal, bold, bolder, lighter, or numbers 100-900 */
+      font-style: normal; /* Options: normal, italic, oblique */
+      font-variant: small-caps; /* Options: normal, small-caps */
+      line-height: 1; /* Adjust the line spacing */
+      text-align: left; /* Options: left, right, center, justify */
+      text-transform: none; /* Options: none, capitalize, uppercase, lowercase */
+      text-decoration: none; /* Options: none, underline, overline, line-through */
+      letter-spacing: normal; /* Adjust spacing between characters */
+      word-spacing: normal; /* Adjust spacing between words */
+  
+      /* Margin and Padding */
+      margin: 10px 0; /* Adjust the margin around paragraphs */
+      margin-top: 10px;    /* Space above the paragraph */
+      margin-right: 15px;  /* Space to the right of the paragraph */
+      margin-bottom: 10px; /* Space below the paragraph */
+      margin-left: 15px;   /* Space to the left of the paragraph */
+    
+    /* Padding */
+      padding-top: 0px;    /* Space above the content inside the paragraph */
+      padding-right: 0px;  /* Space to the right of the content inside the paragraph */
+      padding-bottom: 0px; /* Space below the content inside the paragraph */
+      padding-left: 0px;   /* Space to the left of the content inside the paragraph */
+  
+      /* Background and Borders */
+      background-color: transparent; /* Background color of paragraph */
+      border: none; /* Border around paragraph: style, width, and color */
+      border-radius: 0; /* Rounded corners for paragraph background */
+  
+      /* Shadow and Effects */
+      text-shadow: none; /* Text shadow: h-shadow, v-shadow, blur-radius, and color */
+      box-shadow: none; /* Box shadow: h-offset, v-offset, blur-radius, spread-radius, color */
+  
+      /* Other properties */
+      white-space: normal; /* Handling of white space: normal, nowrap, pre, pre-wrap, pre-line */
+      overflow: visible; /* Handling content overflow: visible, hidden, scroll, auto */
+      word-break: normal; /* Word breaking: normal, break-all, keep-all, break-word */
+      hyphens: auto; /* Automatic hyphenation: none, manual, auto */
+  }
+  
+  h5 {
+      display: block;
+      color: var(--h5col);
+      /* Font styling */
+      /*font-family: 'Arial', sans-serif; /* Change the font family */
+      font-size: 100px; /* Adjust the font size */
+      font-weight: bold; /* Options: normal, bold, bolder, lighter, or numbers 100-900 */
+      font-style: normal; /* Options: normal, italic, oblique */
+      font-variant: normal; /* Options: normal, small-caps */
+      line-height: 1; /* Adjust the line spacing */
+      text-align: center; /* Options: left, right, center, justify */
+      text-transform: none; /* Options: none, capitalize, uppercase, lowercase */
+      text-decoration: none; /* Options: none, underline, overline, line-through */
+      letter-spacing: normal; /* Adjust spacing between characters */
+      word-spacing: normal; /* Adjust spacing between words */
+  
+      /* Margin and Padding */
+      margin: 10px 0; /* Adjust the margin around paragraphs */
+      margin-top: 10px;    /* Space above the paragraph */
+      margin-right: 15px;  /* Space to the right of the paragraph */
+      margin-bottom: 10px; /* Space below the paragraph */
+      margin-left: 15px;   /* Space to the left of the paragraph */
+    
+    /* Padding */
+      padding-top: 0px;    /* Space above the content inside the paragraph */
+      padding-right: 0px;  /* Space to the right of the content inside the paragraph */
+      padding-bottom: 0px; /* Space below the content inside the paragraph */
+      padding-left: 0px;   /* Space to the left of the content inside the paragraph */
+  
+      /* Background and Borders */
+      background-color: transparent; /* Background color of paragraph */
+      border: none; /* Border around paragraph: style, width, and color */
+      border-radius: 0; /* Rounded corners for paragraph background */
+  
+      /* Shadow and Effects */
+      text-shadow: none; /* Text shadow: h-shadow, v-shadow, blur-radius, and color */
+      box-shadow: none; /* Box shadow: h-offset, v-offset, blur-radius, spread-radius, color */
+  
+      /* Other properties */
+      white-space: normal; /* Handling of white space: normal, nowrap, pre, pre-wrap, pre-line */
+      overflow: visible; /* Handling content overflow: visible, hidden, scroll, auto */
+      word-break: normal; /* Word breaking: normal, break-all, keep-all, break-word */
+      hyphens: auto; /* Automatic hyphenation: none, manual, auto */
+  }
+  
+  h6 {
+  display: block;
+      color: var(--h6col);
+      font-size: 70px;
+      /* Font styling */
+      /*font-family: 'Century Gothic', sans-serif; /* Change the font family */
+      font-weight: bold; /* Options: normal, bold, bolder, lighter, or numbers 100-900 */
+      font-style: normal; /* Options: normal, italic, oblique */
+      font-variant: normal; /* Options: normal, small-caps */
+      line-height: 1; /* Adjust the line spacing */
+      text-align: center; /* Options: left, right, center, justify */
+      text-transform: none; /* Options: none, capitalize, uppercase, lowercase */
+      text-decoration: none; /* Options: none, underline, overline, line-through */
+      letter-spacing: normal; /* Adjust spacing between characters */
+      word-spacing: normal; /* Adjust spacing between words */
+  
+      /* Margin and Padding */
+      margin: 10px 0; /* Adjust the margin around paragraphs */
+      margin-top: 10px;    /* Space above the paragraph */
+      margin-right: 15px;  /* Space to the right of the paragraph */
+      margin-bottom: 10px; /* Space below the paragraph */
+      margin-left: 15px;   /* Space to the left of the paragraph */
+    
+    /* Padding */
+      padding-top: 0px;    /* Space above the content inside the paragraph */
+      padding-right: 0px;  /* Space to the right of the content inside the paragraph */
+      padding-bottom: 0px; /* Space below the content inside the paragraph */
+      padding-left: 0px;   /* Space to the left of the content inside the paragraph */
+  
+      /* Background and Borders */
+      background-color: transparent; /* Background color of paragraph */
+      border: none; /* Border around paragraph: style, width, and color */
+      border-radius: 0; /* Rounded corners for paragraph background */
+  
+      /* Shadow and Effects */
+      text-shadow: none; /* Text shadow: h-shadow, v-shadow, blur-radius, and color */
+      box-shadow: none; /* Box shadow: h-offset, v-offset, blur-radius, spread-radius, color */
+  
+      /* Other properties */
+      white-space: normal; /* Handling of white space: normal, nowrap, pre, pre-wrap, pre-line */
+      overflow: visible; /* Handling content overflow: visible, hidden, scroll, auto */
+      word-break: normal; /* Word breaking: normal, break-all, keep-all, break-word */
+      hyphens: auto; /* Automatic hyphenation: none, manual, auto */
+  }
+  
+  table { 
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  th {
+      /* Text formatting */
+      text-align: left; /* Aligns text to the left; you can change it to 'center' or 'right' if needed */
+      font-weight: bold; /* Makes the header text bold */
+      color: var(--Tabhd); /* Sets the text color; choose a color that fits your design */
+      font-size: 25px; /* Sets the font size; adjust as needed */
+      /* font-family: Arial, sans-serif; /* Sets the font family; you can use any font that suits your design */
+  
+      /* Spacing and padding */
+      padding-left: 8px;
+      padding-bottom: 2px;
+      padding-top: 2px;
+      padding-right: 2px;
+      line-height: 1.2; /* Adjusts the line height for better readability */
+  
+      /* Border and background */
+      border-bottom: 2px solid #CCCCCC; /* Adds a bottom border to each header cell */
+      background-color: #F5F5F5; /* Sets a background color for the header; choose a color that fits your design */
+  
+      /* Other styling */
+      vertical-align: middle; /* Aligns content vertically in the middle */
+      text-transform: none; /* Optional: transforms all text to uppercase for a more formal appearance */
+  }
+  
+  tr:nth-child(even) {
+      background-color: #f2f2f2; /* Light gray background */
+  }
+  
+  
+  td {
+      /* Text formatting */
+      text-align: left; /* Aligns text to the left; you can change it to 'center' or 'right' if needed */
+      font-weight: regular; /* Makes the header text bold */
+      color: #333333; /* Sets the text color; choose a color that fits your design */
+      font-size: 25px; /* Sets the font size; adjust as needed */
+      /*font-family: Arial, sans-serif; /* Sets the font family; you can use any font that suits your design */
+       font-variant: normal; /* Options: normal, small-caps */
+  
+      /* Spacing and padding */
+       padding-left: 8px;
+      padding-bottom: 2px;
+      padding-top: 2px;
+      padding-right: 2px;
+      line-height: 1; /* Adjusts the line height for better readability */
+  
+      /* Border and background */
+      border-bottom: 2px solid #CCCCCC; /* Adds a bottom border to each header cell */
+      background-color: #FFFFFF; /* Sets a background color for the header; choose a color that fits your design */
+  
+      /* Other styling */
+      vertical-align: middle; /* Aligns content vertically in the middle */
+      text-transform: none; /* Optional: transforms all text to uppercase for a more formal appearance */
+  }
+  
+  
+  td:nth-child(even){background-color: #ebf0fa}
+  
+  ol {
+      list-style: none; /* Removes default list markers */
+      font-size: 30px; /* Adjust the font size */
+      /* Font styling */
+      /*font-family: 'Arial', sans-serif; /* Change the font family */
+      font-weight: normal; /* Options: normal, bold, bolder, lighter, or numbers 100-900 */
+      font-style: normal; /* Options: normal, italic, oblique */
+      font-variant: normal; /* Options: normal, small-caps */
+      line-height: 1; /* Adjust the line spacing */
+      text-align: left; /* Options: left, right, center, justify */
+      text-transform: none; /* Options: none, capitalize, uppercase, lowercase */
+      text-decoration: none; /* Options: none, underline, overline, line-through */
+      letter-spacing: normal; /* Adjust spacing between characters */
+      word-spacing: normal; /* Adjust spacing between words */
+  
+      /* Margin and Padding */
+      margin: 10px 0; /* Adjust the margin around paragraphs */
+      margin-top: 10px;    /* Space above the paragraph */
+      margin-right: 0px;  /* Space to the right of the paragraph */
+      margin-bottom: 0px; /* Space below the paragraph */
+      margin-left: 60px;   /* Space to the left of the paragraph */
+      counter-reset: list-counter; /* Initializes a counter */
+      padding-left: 30px; /* Adjust if needed */
+      list-style-position: inside; /* Options: inside, outside */
+      /* color: #333333; /* Text color for the list items */
+  
+      /* Spacing and Padding */
+      padding-left: 0px; /* Adjusts the padding to the left of the list */
+      margin: 10px 0; /* Adjusts the margin around the list */
+  
+      /* Font and Text */
+      font-family: Arial, sans-serif; /* Sets the font family */
+      font-size: 16px; /* Sets the font size */
+      line-height: 1.6; /* Adjusts the line height for better readability */
+  
+  }
+  
+  ol, ol li {
+      font-size: 30px; /* This sets the font size for both the <ul> and <li> elements */
+  }
+  
+  ol li {
+      counter-increment: list-counter; /* Increments the counter for each list item */
+      position: relative; /* Allows absolute positioning of pseudo-elements relative to the list items */
+      padding-left: 60px; /* Space for the custom marker */
+  }
+  
+  ol li::before {
+      content: counter(list-counter) "."; /* Displays the counter and a period */
+      position: absolute; /* Positions the pseudo-element absolutely */
+      left: 10px; /* Aligns the pseudo-element to the left of the list item */
+      color: var(--lists); /* Sets the color of the custom bullet */
+      font-size: 30px; /* Adjusts the size of the bullet */
+      top: 50%; /* Aligns the bullet vertically */
+      transform: translateY(-50%); /* Centers the bullet vertically */
+  }
+  
+  ul, ul li {
+      font-size: 25px; /* This sets the font size for both the <ul> and <li> elements */
+  }
+  
+  
+  ul {
+      list-style-type: none; /* Removes default list bullets */
+      padding-left: 5px; /* Adjusts the padding to the left of the list */
+      padding-bottom: 0px; /* Adjusts the padding to the left of the list */
+      margin-top: 0px;    /* Space above the paragraph */
+      margin-right: 0px;  /* Space to the right of the paragraph */
+      margin-bottom: 0px; /* Space below the paragraph */
+      margin-left: 0px;   /* Space to the left of the paragraph */
+  }
+  
+  ul li {
+      position: relative; /* Needed for absolute positioning of the pseudo-element */
+      padding-left: 60px; /* Adds space for the custom bullet */
+  }
+  
+  ul li::before {
+      content: '•'; /* Custom bullet symbol */
+      position: absolute; /* Positions the pseudo-element absolutely */
+      left: 10px; /* Aligns the pseudo-element to the left of the list item */
+      color: var(--lists); /* Sets the color of the custom bullet */
+      font-size: 60px; /* Adjusts the size of the bullet */
+      top: 50%; /* Aligns the bullet vertically */
+      transform: translateY(-50%); /* Centers the bullet vertically */
+  }
+  
+    Header {
+      display: block;
+      font-size: 10px;
+  }
+  
+    Footer {
+      display: block;
+      font-size: 10px;
+  }
+  
+  img {
+      /* Ensures the image is not larger than its container */
+      max-width: 100%;
+      height: auto;
+  
+      /* Adds a subtle border and some shadow for depth */
+      border: 0px solid #ccc;
+      /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);*/
+  
+      /* Adds some space around the image */
+      margin:0px 0;
+  
+      /* Smoothens the image rendering */
+      image-rendering: auto;
+  
+      /* Optional: Rounds the corners of the image */
+      border-radius: 0px;
+  
+      /* Ensures the image doesn’t stretch out of proportion */
+      object-fit: cover;
+  
+      /* Aligns image in case it's inside a container like a figure or a div */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }

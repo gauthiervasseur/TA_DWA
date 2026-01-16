@@ -1,0 +1,423 @@
+/**
+ * @theme page_dwa_old
+ * @auto-scaling fittingHeader,math
+ */
+
+section {
+  width: 8.5in;
+  height: 11in;
+  color: black;
+  padding-left: 0.6in;
+  padding-right: 0.6in;
+  padding-top: 0.5in;
+  padding-bottom: 0.5in;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 🔑 FIX */
+}
+
+/* Brochure Font */
+p, ul, footer, header, th, td, ol, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* PAGE NUMBER */
+section::after {
+  content: attr(data-marpit-pagination);
+  position: absolute;
+  bottom: 15px;
+  right: 40px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* PAGE Footer (bottom-left) */
+.custom-footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 12px;
+  color: #999;
+  white-space: nowrap;
+  display: inline-block;
+  pointer-events: none; /* optional: avoids interaction */
+}
+
+
+/* Make all bold text orange */
+strong, b {
+  color: #FF9100;
+}
+
+.label strong {
+  color: #000000;
+}
+
+/* Section Headers */
+h1 {
+  color: #000000 !important;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 25pt;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+h2 {
+  color: #7b7b7b;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16pt;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+h3 {
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 14pt;
+}
+
+h4 {
+  font-size: 12pt;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* H4 callout box */
+section h4 {
+  display: inline-block;         /* box fits the text */
+  background: #fff1e1;           /* orange */
+  color: #000000;                /* white text */
+  padding: 8px 14px;
+  border: none;                  /* no line */
+  border-radius: 10px;           /* rounded corners */
+  margin: 10px 0 12px 0;
+  font-weight: 700;
+}
+
+/* If your theme adds an underline / rule to h4, this kills it */
+section h4::after,
+section h4::before {
+  content: none !important;
+}
+
+h5 {
+  color: #ffffff;
+  font-size: 12pt;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* H5 callout box */
+section h5 {
+  display: inline-block;         /* box fits the text */
+  background: #fdfbf9;           /* orange */
+  color: #000000;                /* white text */
+  padding: 8px 14px;
+  border: none;                  /* no line */
+  border-radius: 10px;           /* rounded corners */
+  margin: 10px 0 12px 0;
+  font-weight: 200;
+}
+
+/* If your theme adds an underline / rule to h4, this kills it */
+section h5::after,
+section h5::before {
+  content: none !important;
+}
+
+h6 {
+  color: #424242;
+  font-size: 14pt;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center; /* Options: left, right, center, justify */
+}
+
+/* H6 callout box */
+section h6 {
+  display: inline-block;         /* box fits the text */
+  background: #000000;           /* orange */
+  color: #ffffff;                /* white text */
+  padding: 8px 14px;
+  border: none;                  /* no line */
+  border-radius: 10px;           /* rounded corners */
+  margin: 10px 0 12px 0;
+  font-weight: 200;
+}
+
+/* If your theme adds an underline / rule to h4, this kills it */
+section h6::after,
+section h6::before {
+  content: none !important;
+}
+
+p, td, th {
+  color: #000000;
+  line-height: 22px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 10pt;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+/* Blocks with Borders */
+.block {
+  border: 0px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Force Page Break in Print */
+.page-break {
+  page-break-before: always;
+}
+
+
+/* -------------------------------- */
+/* Specific Style Tweaks for tables */
+/* -------------------------------- */
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: fit-content;
+  font-size: 7pt;
+    /* OUTER BORDER */
+  border: 1px solid var(--TableLine, rgba(0,0,0,.25));
+}
+
+
+th {
+  color: var(--th); /* Adjust as needed */
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 7pt;
+}
+
+td {
+  color: var(--td); /* Adjust as needed */
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 7pt;
+}
+
+
+table {
+  border-collapse: collapse;
+  border: none;          /* 🔥 remove outer border */
+}
+
+th, td {
+  border: none;
+  border-bottom: 1px solid var(--TableLine, rgba(0,0,0,.25));
+  padding: 6px 12px;
+}
+
+/* thicker header separator */
+thead th {
+  border-bottom: 2px solid var(--TableLine, rgba(0,0,0,.4));
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+section table thead tr th,
+section table tr:first-child th {
+  background-color: var(--Tablebkg) !important;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--TablebkgOdd);
+}
+
+td:nth-child(even){
+  background-color: var(--TablebkgEven) !important;
+}
+ 
+/* ---------------------------------------------------- */
+/* Specific Style Tweaks for Bullets and Numbered lists */
+/* ---------------------------------------------------- */
+
+ol {
+    list-style: none; /* Removes default list markers */
+    font-size: 12px; /* Adjust the font size */
+    /* Font styling */
+    /*font-family: 'Arial', sans-serif; /* Change the font family */
+    font-weight: normal; /* Options: normal, bold, bolder, lighter, or numbers 100-900 */
+    font-style: normal; /* Options: normal, italic, oblique */
+    font-variant: normal; /* Options: normal, small-caps */
+    line-height: 1.2; /* Adjust the line spacing */
+    text-align: left; /* Options: left, right, center, justify */
+    text-transform: none; /* Options: none, capitalize, uppercase, lowercase */
+    text-decoration: none; /* Options: none, underline, overline, line-through */
+    letter-spacing: normal; /* Adjust spacing between characters */
+    word-spacing: normal; /* Adjust spacing between words */
+    padding-left: 30px; /* Adjusts the padding to the left of the list */
+    /* Other properties */
+    white-space: normal; /* Handling of white space: normal, nowrap, pre, pre-wrap, pre-line */
+    overflow: visible; /* Handling content overflow: visible, hidden, scroll, auto */
+    word-break: normal; /* Word breaking: normal, break-all, keep-all, break-word */
+
+    /* Margin and Padding */
+    margin: 30px 0; /* Adjust the margin around paragraphs */
+    margin-top: 10px;    /* Space above the paragraph */
+    margin-right: 0px;  /* Space to the right of the paragraph */
+    margin-bottom: 0px; /* Space below the paragraph */
+    margin-left: 0px;   /* Space to the left of the paragraph */
+    counter-reset: list-counter; /* Initializes a counter */
+    list-style-position: inside; /* Options: inside, outside */
+
+    /* Spacing and Padding */
+    margin: 0px 0; /* Adjusts the margin around the list */
+    hyphens: none; /* Automatic hyphenation: none, manual, auto */
+}
+
+ol, ol li {
+    font-size: 12px; /* This sets the font size for both the <ul> and <li> elements */
+    word-wrap: normal;
+    hyphens: none; /* Automatic hyphenation: none, manual, auto */
+}
+
+ol li {
+    counter-increment: list-counter; /* Increments the counter for each list item */
+    position: relative; /* Allows absolute positioning of pseudo-elements relative to the list items */
+    padding-left: 30px; /* Space for the custom marker */
+    word-wrap: normal;
+    hyphens: none; /* Automatic hyphenation: none, manual, auto */
+}
+
+ol li::before {
+    content: counter(list-counter) "."; /* Displays the counter and a period */
+    position: absolute; /* Absolute position of the pseudo-element */
+    left: -10px; /* Aligns the pseudo-element to the left of the list item */
+    color: var(--bullet_nbr); /* Sets the color of the custom marker */
+    font-size: 12px; /* Sets the size of the custom marker */
+    top: 0%; /* Positions the marker halfway down the list item */
+    word-wrap: normal;
+    hyphens: none; /* Automatic hyphenation: none, manual, auto */
+}
+
+
+/* =========================
+   LISTS (ul) — clean + configurable
+   - --lists       : text color
+   - --bullet_nbr  : bullet color
+   - --bullet_char : bullet symbol
+   ========================= */
+
+/* Optional defaults (set these in :root or your theme) */
+
+:root{
+  --bullet_char: "■";
+  --bullet_char_nested: "–";
+  --list_font_size: 12px;
+  --list_line_height: 1.4;
+  --list_indent: 12px;
+  --bullet_gap: 0.5em;
+  --bullet_size: 1em;
+}
+
+ul{
+  color: var(--lists);
+  list-style: none;                 /* we draw our own bullets */
+  margin: 0;
+  padding-left: var(--list_indent);
+  font-size: var(--list_font_size, 30px);
+  line-height: var(--list_line_height, 1.4);
+  hyphens: none;
+}
+
+/* -------------------------------------------- */
+/* Each list item reserves space for the bullet */
+/* -------------------------------------------- */
+
+ul > li{
+  position: relative;
+  padding-left: calc(var(--bullet_size, 1em) + var(--bullet_gap, 0.7em));
+  margin: 0.25em 0;                 /* tweak vertical spacing */
+  hyphens: none;
+}
+
+/* Bullet (level 1) */
+ul > li::before{
+  content: var(--bullet_char, "•");
+  position: absolute;
+  left: 0;
+  top: 0.3em;                      /* aligns bullet with first line */
+  color: var(--bullet_nbr);
+  font-size: var(--bullet_size, 1em);
+  line-height: 1;
+}
+
+/* Nested lists */
+ul ul{
+  margin: 0.25em 0 0;
+  padding-left: calc(var(--list_indent) * 0.8);
+}
+
+/* Nested bullet symbol (level 2+) */
+ul ul > li::before{
+  content: var(--bullet_char_nested, "–");
+}
+
+/* ---------------------------------- */
+/* Specific Style Tweaks for bullets
+Here are some bullet character options you can use by setting the --bullet_char and --bullet_char
+
+Classic dots
+"•" (bullet)
+"◦" (hollow bullet)
+"∙" (small dot)
+"·" (middle dot)
+Squares / diamonds
+"▪" (small square)
+"■" (square)
+"▫" (hollow small square)
+"□" (hollow square)
+"◆" (diamond)
+"◇" (hollow diamond)
+"▶" (triangle)
+"▸" (small triangle)
+Dashes / minimal
+"–" (en dash)
+"-" (hyphen)
+"→" (arrow)
+"›" (chevron)
+
+Check / plus / star
+"✓" (check)
+"✔" (heavy check)
+"+" (plus)
+"✦" (star)
+"✶" (starburst)
+
+Numbered or lettered vibes (if you want “badge”-like bullets)
+"①" "②" "③" …
+"Ⓐ" "Ⓑ" "Ⓒ" …
+---------------------------------- */

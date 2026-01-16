@@ -1,0 +1,257 @@
+/**
+ * @theme brochure-wif
+ * @auto-scaling fittingHeader,math
+ */
+
+ @import 'default';
+
+ section {
+  width: 8.5in;
+  height: 11in;
+  color: black;
+  padding-left: 1in;
+  padding-right: 1in;
+  padding-top: 0.5in;
+  padding-bottom: 0.5in;
+}
+ 
+ /* Brochure Container */
+ .brochure {
+   display: flex;
+   justify-content: space-between;
+   align-items: stretch;
+   border: 0px solid #000;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+ }
+
+  /* Brochure Font */
+  p, ul, footer, header, th, td, ol, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    }
+    
+  /* PAGE NUMBER */
+section::after {
+  content: attr(data-marpit-pagination);
+  position: absolute;
+  bottom: 15px;
+  right: 40px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* PAGE Footer (bottom-left) */
+.custom-footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 12px;
+  color: #999;
+  white-space: nowrap;
+  display: inline-block;
+  pointer-events: none; /* optional: avoids interaction */
+}
+
+ .left-column {
+  flex: 1 ;
+  background-color: #47429281 ;
+  color: white ;
+  text-align: left ;
+  border-right: 0px solid black ;
+
+  /* Fix spacing issues */
+  display: flex ;
+  flex-direction: column ;
+  justify-content: flex-start ; /* Prevent space-between pushing content */
+  padding: 0px ;
+  gap: 12px ; /* small consistent spacing between sections */
+}
+
+ 
+ /* Full-Width DWA Logo Box */
+ .logo-box {
+   width: 100%; /* Make it span the full column */
+   background-color: white;
+   text-align: center;
+   padding: 5px 0; /* Adds vertical space for logo */
+   border-bottom: 0px solid black;
+ }
+ 
+ /* Style the DWA Logo */
+ .logo-box img {
+   max-width: 80%;  /* Keeps the logo responsive */
+   height: auto;
+   max-height: 200px;  /* Prevents oversized logo */
+ }
+ 
+ /* Pushes logo to the bottom */
+ .image-container {
+   width: 100%;
+   text-align: center;
+   margin-top: auto; /* Ensures it's always at the bottom */
+   padding-top: 10px;
+   padding-bottom: 40px;
+ }
+ 
+ /* Style for the image */
+ .image-container img {
+   max-width: 80%;  /* Responsive width */
+   height: auto;
+   max-height: 500px;  /* Prevents oversized logos */
+ }
+
+/* Outcome Section */
+.outcome-section {
+  background-color: #ececec;  /* Light grey background */
+  border: none; /* No border */
+  border-radius: 10px;  /* Soft rounded corners */
+  padding: 10px;
+  margin: 20px;
+  box-shadow: none; /* No shadow for a clean design */
+}
+
+/* Outcome Title */
+.outcome-title {
+  font-size: 12pt;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: #000000; /* Black text */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Outcome Text */
+.outcome-text {
+  font-size: 12pt;
+  font-family: 'Open Sans', sans-serif;
+  color: #000000;
+  text-align: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+ 
+ /* Right Column (Course Content) */
+ .right-column {
+   flex: 2;
+   padding: 20px;
+   background-color: white;
+ }
+
+/* Make all bold text orange */
+strong, b {
+  color: #474292  ;
+}
+ 
+ /* Section Headers */
+ h1 {
+   color: #000000;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-size: 22pt;
+   font-weight: bold;
+   margin-top: 0px;
+   text-align: center; /* Options: left, right, center, justify */
+
+ }
+ 
+ h2 {
+   color: #7b7b7b;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-size: 12pt;
+   padding-top: 0px;
+   padding-bottom: 0px;
+  }
+ 
+ 
+ h3 {
+   color: #000000;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-size: 10pt;
+ }
+ 
+ h4 {
+   color: #424242;
+   font-size: 12pt;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+ }
+ 
+ h5 {
+   color: #ffffff;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   font-size: 20pt;
+ }
+ 
+ h6 {
+   color: #ffffff;
+   font-size: 14pt;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+ }
+ 
+ p {
+   color: #000000;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-size: 8pt;
+   margin-top: 0px;
+   margin-bottom: 5px;
+ }
+ 
+ ul  {
+   color: #000000;
+   margin-top: 0px;
+   margin-bottom: 5px;
+   margin-left: 10px;
+   margin-right: 20px;
+   font-size: 8pt;
+ }
+
+ li > ul {
+  color: #000000;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 8pt;
+}
+ 
+ /* Blocks with Borders */
+ .block {
+   border: 0px solid black;
+   padding: 10px;
+   margin-bottom: 10px;
+ }
+ 
+ /* Force Page Break in Print */
+ .page-break {
+   page-break-before: always;
+ }
+
+.watermark-slide {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 900px;
+  height: 900px;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
