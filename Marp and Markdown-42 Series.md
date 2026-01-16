@@ -17,6 +17,7 @@ backgroundColor: white
 
 
 ### The Narrative Reporting Imperative
+
 - We need to report for decision, action and impact
 - Human resource and time are too precious to be wasted
 - Embrace Story Telling and Narrative BI
@@ -30,10 +31,12 @@ backgroundColor: white
 - Relying 100% on GenAi solutions is non-deterministic
 
 ### What Markdown Can Do
-- It can take your braindump into a a structured, high quality
-  - Writeup
+- It can take your branding into a a structured, high quality
+  - Write-up
   - Brochure
   - Deck
+
+---
 
 ### GenAi speaks Markdown
 - The process can leverage the editing, wordsmithing and generated content straight from your favorite LLM
@@ -59,13 +62,19 @@ backgroundColor: white
 - We will use VS Code
 
 ### Why VS code?
-
 - The Add-ons
 - The Microsoft suite
 - The versatility to do more things such as run code (see Python for Analysts-42 Series), to create text-driven diagrams
 - To easily manage you assets, images and styles
 - To collaborate
 - The integration in the process to generate slides
+
+### The key add-ons
+- Marp for VS Code
+- Flutter Color
+- Optional MarpItUp (to streamline and facilitate your process)
+- CSV to Markdown
+- Excel to Markdown
 
 ---
 
@@ -86,17 +95,55 @@ backgroundColor: white
 
 ## The keys to Text Markup
 
-### Text styling options
+Once the Markdown foundations are understood, you can work with your favorite LLM and ask it to provide you with the right notation to employ. Also, as you converse with it, it will naturally deliver its content in Markdown and you'll be able to paste it direcly in your deck or write-up.
 
-### the p Style
+
+### Text styling options
+- Styles are defined in the CSS file
+- They can define any detail of characters, layout etc.
+- Here are a few core elements
+  - font
+  - color
+  - size
+  - weight and character style
+  - indents
+  - margin
+  - padding
+  - Line height
+- Ask your favorite LLM to learn new ones and expand the finesse of your CSS setup
+
+They are defined with this syntax structure:
+
+    ```css
+            h5{
+            font-size: 12pt;    
+            background: #FFFFFF;
+            color: #123456;
+            padding: 8px 14px;
+            border: none;
+            margin: 10px 0 12px;
+            font-weight: 200;
+            line-height: 1.6;
+            }
+    ```
+
+### the base style
+
+p is the base style applied when no markup is added.
+It can be set to italic by adding * before and after, to bold by adding ** and bold-italic by adding ***
+
 
 ### the headers styles
 
-### the bullet styles
-
-### the ordered list styles
+### the ordered and unordered list styles
 
 ### The table styles
+- Markdown tables are designed with special characters
+- The drawback: it is not buildable easily
+- The advantage: it can be styled fast and beautifully
+- The trick: you design them in Excel or a csv editor and you paste them as Markdown
+- Td, th are the key style
+- Virtually anything can be styled for beautiful results
 
 ### The special styles to know about
 

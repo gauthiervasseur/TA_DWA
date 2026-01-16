@@ -13,7 +13,7 @@ section {
   height: 5.5in;
   color: black;
   padding-left: 0.2in;
-  padding-right: 0.2in;
+  padding-right: 0.3in;
   padding-top: 0.2in;
   padding-bottom: 0.2in;
 
@@ -94,16 +94,17 @@ p, ul, footer, header, th, td, ol, h1, h2, h3, h4, h5, h6 {
     ============================= */
 
 :root{  
-  --p_td_th_code_font_size: 7pt;
+  --p_td_th_font_size: 7pt;
   --h1_font_size: 15pt;
   --h2_font_size: 12pt;
   --h3_font_size: 8pt;
   --h4_font_size: 8pt;
   --h5_font_size: 8pt;
   --h6_font_size: 8pt;
-  --list_font_size: 8pt;
+  --list_font_size: 7pt;
   --bullet_size: 1em;
   --list_indent: 12pt;
+  --code_font_size: 5pt;
   --footer_font_size: 5pt;
   --header_font_size: 5pt;
 }
@@ -220,15 +221,16 @@ h6::after, h6::before{ content: none !important; }
 p, td, th,{
   color: var(--color_text);
   margin: 0 10px 5px;
-  font-size: var(--p_td_th_code_font_size);
+  font-size: var(--p_td_th_font_size);
   line-height: 1.6;
 }
 
 code {
   color: var(--color_text);
-  font-size: var(--p_td_th_code_font_size);
+  font-size: var(--code_font_size);
   line-height: 1.6;
-  background: var(--callout_h5_bg);
+  background: #0000;
+  margin: 0 10px 5px;
 }
 
 /* =========================
