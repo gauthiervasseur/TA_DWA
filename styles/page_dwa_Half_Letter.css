@@ -1,5 +1,5 @@
 /**
- * @theme page_dwa
+ * @theme page_dwa_Half_Letter
  * @auto-scaling fittingHeader,math
  */
 
@@ -9,13 +9,13 @@
    ========================= */
 
 section {
-  width: 8.5in;
-  height: 11in;
+  width: 4.25in;
+  height: 5.5in;
   color: black;
-  padding-left: 0.6in;
-  padding-right: 0.6in;
-  padding-top: 0.5in;
-  padding-bottom: 0.5in;
+  padding-left: 0.2in;
+  padding-right: 0.2in;
+  padding-top: 0.2in;
+  padding-bottom: 0.2in;
 
   display: flex;
   flex-direction: column;
@@ -55,9 +55,9 @@ p, ul, footer, header, th, td, ol, h1, h2, h3, h4, h5, h6 {
   --c-table-line: rgba(0,0,0,.25);
   --c-table-line-header: rgba(0,0,0,.4);
 
-  /* =========================
-     2) SEMANTIC TOKENS
-     ========================= */
+  /* =============================
+     2) SEMANTIC TOKENS for COLORS
+     ============================= */
 
   --color_text: var(--c-black);
   --color_muted: var(--c-muted);
@@ -87,15 +87,43 @@ p, ul, footer, header, th, td, ol, h1, h2, h3, h4, h5, h6 {
 
   --lists: var(--color_text); 
   --bullet_nbr: var(--color_accent);
+}
 
-  --bullet_char: "-";
-  --bullet_char_nested: "–";
-  --list_font_size: 12pt;
-  --list_line_height: 1.4;
+/* =============================
+    3) SEMANTIC TOKENS for Size
+    ============================= */
+
+:root{  
+  --p_td_th_code_font_size: 7pt;
+  --h1_font_size: 15pt;
+  --h2_font_size: 12pt;
+  --h3_font_size: 8pt;
+  --h4_font_size: 8pt;
+  --h5_font_size: 8pt;
+  --h6_font_size: 8pt;
+  --list_font_size: 8pt;
+  --bullet_size: 1em;
   --list_indent: 12pt;
+  --footer_font_size: 5pt;
+  --header_font_size: 5pt;
+}
+
+/* ===============================
+    4) SEMANTIC TOKENS for Bullets
+    ============================= */
+
+:root{    
+  --bullet_char: "■";
+  --bullet_char_nested: "–";
+  --list_line_height: 1.4;
   --bullet_gap: 0.5em;
   --bullet_size: 1em;
 }
+
+
+/* ===============================
+    4) Styles
+    ============================= */
 
 /* bold accent */
 strong, b{
@@ -109,7 +137,7 @@ strong, b{
 h1{
   color: var(--color_text) !important;
   margin: 0 10px 10px;
-  font-size: 25pt;
+  font-size: var(--h1_font_size);
   font-weight: 700;
   text-align: center;
   line-height: 1.2;
@@ -119,14 +147,14 @@ h2{
   color: var(--color_muted);
   margin: 10px 10px 5px;
   margin-bottom: 10px;
-  font-size: 16pt;
+  font-size: var(--h2_font_size);
 }
 
 h3{
   color: var(--color_text);
   margin: 10px 10px 5px;
-  margin-bottom: 20px;
-  font-size: 14pt;
+  margin-bottom: 10px;
+  font-size: var(--h3_font_size);
 }
 
 /* Callout headings */
@@ -138,7 +166,7 @@ h4 {
   border: none;
   border-radius: 10px;
   margin: 10px 0 12px;
-  font-size: 12pt;
+  font-size: 10pt;
   font-weight: 700;
   line-height: 1.6;
 }
@@ -151,7 +179,7 @@ h4 + ul {
   border: none;
   border-radius: 10px;
   margin: 10px 0 12px;
-  font-size: 12pt;
+  font-size: var(--h4_font_size);
   line-height: 1.6;
 }
 
@@ -165,7 +193,7 @@ h5{
   border: none;
   border-radius: 10px;
   margin: 10px 0 12px;
-  font-size: 12pt;
+  font-size: var(--h5_font_size);
   font-weight: 200;
   line-height: 1.6;
 }
@@ -180,7 +208,7 @@ h6{
   border: none;
   border-radius: 10px;
   margin: 10px 0 12px;
-  font-size: 14pt;
+  font-size: var(--h6_font_size);
   font-weight: 200;
   text-align: center;
   line-height: 1.6;
@@ -192,13 +220,13 @@ h6::after, h6::before{ content: none !important; }
 p, td, th,{
   color: var(--color_text);
   margin: 0 10px 5px;
-  font-size: 12pt;
+  font-size: var(--p_td_th_code_font_size);
   line-height: 1.6;
 }
 
 code {
   color: var(--color_text);
-  font-size: 12pt;
+  font-size: var(--p_td_th_code_font_size);
   line-height: 1.6;
   background: var(--callout_h5_bg);
 }
@@ -210,9 +238,9 @@ code {
 section::after{
   content: attr(data-marpit-pagination);
   position: absolute;
-  bottom: 15px;
-  right: 40px;
-  font-size: 12pt;
+  bottom: 1px;
+  right: 10px;
+  font-size: var(--footer_font_size);
   color: var(--pagination_color);
 }
 
@@ -220,7 +248,7 @@ section::after{
   position: absolute;
   bottom: 0px;
   left: 0px;
-  font-size: 12px;
+  font-size: var(--footer_font_size);
   color: var(--footer_color);
   white-space: nowrap;
   display: inline-block;
@@ -297,7 +325,7 @@ ol{
   margin: 0;
   padding-left: 30px;
   counter-reset: list-counter;
-  font-size: 12px;
+  font-size: var(--list_font_size, 12px);
   line-height: 1.2;
   color: var(--color_text);
 }
@@ -314,7 +342,7 @@ ol li::before{
   left: -10px;
   top: 0;
   color: var(--bullet_nbr);
-  font-size: 12pt;
+  font-size: var(--list_font_size, 12px);
   line-height: 1;
 }
 
@@ -335,14 +363,15 @@ ul > li{
   position: relative;
   padding-left: calc(var(--bullet_size, 1em) + var(--bullet_gap, 0.7em));
   margin: 0.25em 0;
-  font-size: 12pt;
+  font-size: var(--list_font_size, 12px);
 }
 
 ul > li::before{
   content: var(--bullet_char, "•");
   position: absolute;
   left: 0;
-  top: 0.3em;
+  top: calc(0.5 * var(--list_line_height, 1.4) * 1em);
+  transform: translateY(-50%);
   color: var(--bullet_nbr);
   font-size: var(--bullet_size, 1em);
   line-height: 1;
@@ -358,68 +387,6 @@ ul ul > li::before{
 }
 
 
-
-/* =========================
-   LISTS (ul) — clean + configurable
-   - --lists       : text color
-   - --bullet_nbr  : bullet color
-   - --bullet_char : bullet symbol
-   ========================= */
-
-/* Optional defaults (set these in :root or your theme) */
-
-:root{
-  --bullet_char: "■";
-  --bullet_char_nested: "–";
-  --list_font_size: 12pt;
-  --list_line_height: 1.4;
-  --list_indent: 12px;
-  --bullet_gap: 0.5em;
-  --bullet_size: 1em;
-}
-
-ul{
-  color: var(--lists);
-  list-style: none;                 /* we draw our own bullets */
-  margin: 0;
-  padding-left: var(--list_indent);
-  font-size: var(--list_font_size, 30px);
-  line-height: var(--list_line_height, 1.4);
-  hyphens: none;
-}
-
-/* -------------------------------------------- */
-/* Each list item reserves space for the bullet */
-/* -------------------------------------------- */
-
-ul > li{
-  position: relative;
-  padding-left: calc(var(--bullet_size, 1em) + var(--bullet_gap, 0.7em));
-  margin: 0.25em 0;                 /* tweak vertical spacing */
-  hyphens: none;
-}
-
-/* Bullet (level 1) */
-ul > li::before{
-  content: var(--bullet_char, "•");
-  position: absolute;
-  left: 0;
-  top: 0.3em;                      /* aligns bullet with first line */
-  color: var(--bullet_nbr);
-  font-size: var(--bullet_size, 1em);
-  line-height: 1;
-}
-
-/* Nested lists */
-ul ul{
-  margin: 0.25em 0 0;
-  padding-left: calc(var(--list_indent) * 0.8);
-}
-
-/* Nested bullet symbol (level 2+) */
-ul ul > li::before{
-  content: var(--bullet_char_nested, "–");
-}
 
 /* ---------------------------------- */
 /* Specific Style Tweaks for bullets

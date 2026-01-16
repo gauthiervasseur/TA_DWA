@@ -1,17 +1,6 @@
 {
 "markdown.marp.themes": [
-        "styles/doc-dwa.css",
-        "styles/doc-dtsa.css",
-        "styles/DWA-writeup.css",
-        "styles/pagedwa_green.css",
         "styles/page_dwa.css",
-        "styles/page_valor.css",
-    ],
-    "cSpell.words": [
-        "hackathons"
-    ],
-
-    "markdown-pdf.styles": [
-  "DWA-writeup.css"
-]
+        "styles/page_dwa_Half_Letter.css"
+    ]
 }

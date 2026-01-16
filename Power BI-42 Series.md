@@ -1,9 +1,5 @@
----
-marp: true
-theme: page_dwa
-paginate: true
-backgroundColor: white
----
+
+
 
 
 # Power BI
